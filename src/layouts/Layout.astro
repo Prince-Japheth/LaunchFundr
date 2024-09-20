@@ -1,38 +1,47 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
+import AppHeader from "../components/AppHeader.astro";
 ---
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/logo.png" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="">
-		<title>LaunchFundr</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="" />
+    <title>LaunchFundr</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	</head>
-	<body class="bg-white dark:bg-gray-900">
-		<AppHeader/>
-		<slot />
-		<AppFooter/>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <AppHeader />
+    <slot />
+    <AppFooter />
 
-		<script src="/src/aos.js"></script>
-	</body>
+    <script src="/src/aos.js"></script>
+  </body>
+  <script>
+    import AOS from "aos";
+    import "aos/dist/aos.css";
+
+    // Initialize AOS
+    AOS.init();
+  </script>
 </html>
 <style>
-	html {
-		font-family: Urbanist, sans-serif;
-		scroll-behavior: smooth;
-	}
+  html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+  }
 
-	body {
-		margin: 0;
-	}
+  body {
+    margin: 0;
+  }
 </style>
