@@ -19,6 +19,7 @@ import AppHeader from "../components/AppHeader.astro";
     />
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body class="bg-white dark:bg-gray-900">
     <AppHeader />
@@ -26,14 +27,15 @@ import AppHeader from "../components/AppHeader.astro";
     <AppFooter />
 
     <script src="/src/aos.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  import AOS from "aos";
+	  import "aos/dist/aos.css";
+  
+	  // Initialize AOS
+	  AOS.init();
+	</script>
   </body>
-  <script>
-    import AOS from "aos";
-    import "aos/dist/aos.css";
-
-    // Initialize AOS
-    AOS.init();
-  </script>
 </html>
 <style>
   html {
